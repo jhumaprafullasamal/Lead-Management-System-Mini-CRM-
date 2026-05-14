@@ -1,7 +1,7 @@
 const express = require('express');
 const router = express.Router();
 const { body, query, param, validationResult } = require('express-validator');
-const pool = require('../db');
+const {pool} = require('../db');
 const { verifyToken } = require('../middleware/auth');
 
 // Apply auth to all lead routes

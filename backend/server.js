@@ -11,11 +11,12 @@ const PORT = process.env.PORT || 5000;
 // Middleware
 app.use(cors({
   origin: (origin, callback) => {
-    const allowedOrigins = [
-      process.env.FRONTEND_URL,
-      'http://localhost:3000',
-      'http://localhost:5173'
-    ].filter(Boolean);
+   const allowedOrigins = [
+  process.env.FRONTEND_URL,
+  'https://lead-management-system-mini-4j33i580g.vercel.app',
+  'http://localhost:3000',
+  'http://localhost:5173'
+].filter(Boolean);
     
     if (!origin || allowedOrigins.includes(origin)) {
       callback(null, true);
